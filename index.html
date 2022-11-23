@@ -3,12 +3,55 @@
 
 <head>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
         .rating{
            color:antiquewhite;
            border:4px;
            background: indigo;
+
+
            
 
+        }
+        body{
+            background-color: #222;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+
+        }
+        form{
+           background-color: #333;
+           display: inline-flex;
+           border-radius: 1.5rem;
+           padding: 1.5rem;
+           color: #fff;
+           flex-direction: column;
+           width:30rem;
+           gap: 1rem;
+           
+           
+        }
+        h1{
+            font-family:fantasy;
+            margin:0rem;
+            padding:0rem;
+            
+        }
+        input[type="submit"]{
+            background:#f80;
+            color:inherit;
+            border-radius: 100rem;
+            padding:1rem;
+            border: none;
+            letter-spacing: 0.25em;
+            text-transform:uppercase;
+
+        }
+        input[type="checkbox"]{
+            align-self: flex-start;
         }
     </style>
 
@@ -22,9 +65,9 @@
         <h1>
             How Did We Do?
         </h1>
-        <p>
+        <div>
             gerjgeogj
-        </p>
+        </div>
         <div>
          <label>
             <input type="radio" value="1" name="rating">
@@ -36,6 +79,7 @@
             
         </div>
         <input type="submit">
+
     </form>
 </body>
 
