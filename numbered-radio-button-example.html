@@ -1,0 +1,67 @@
+<html>
+
+<head>
+	<style>
+		/*
+			Don't display the native radio buttons
+			Never place outlines on the radio elements
+		*/
+		input[type="radio"] {
+			appearance: none;
+			outline: none !important;
+		}
+
+
+		/*
+			Select the div that comes after each radio button
+		*/
+		input[type="radio"]+div {
+
+			/* Make it look like a circle */
+			background: #fbc;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 2rem;
+
+			/* Center the text inside of it */
+			line-height: 2rem;
+			text-align: center;
+
+			/* Don't highlight text if dragged */
+			user-select: none;
+
+		}
+
+		/*
+			Change color of div when checked
+		*/
+		input:checked+div {
+			background: #867;
+		}
+	</style>
+</head>
+
+<body>
+	<label>
+		<input type="radio" value="1" name="rating">
+		<div>1</div>
+	</label>
+	<label>
+		<input type="radio" value="2" name="rating">
+		<div>2</div>
+	</label>
+	<label>
+		<input type="radio" value="3" name="rating">
+		<div>3</div>
+	</label>
+	<label>
+		<input type="radio" value="4" name="rating">
+		<div>4</div>
+	</label>
+	<label>
+		<input type="radio" value="5" name="rating">
+		<div>5</div>
+	</label>
+</body>
+
+</html>
