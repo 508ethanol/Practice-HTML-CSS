@@ -4,54 +4,102 @@
 <head>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-        .rating{
-           color:antiquewhite;
-           border:4px;
-           background: indigo;
+
+        .rating {
+            color: antiquewhite;
+            border: 4px;
+            background: indigo;
 
 
-           
+
 
         }
-        body{
+
+        body {
             background-color: #222;
             font-family: 'Roboto', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height:100vh;
+            height: 100vh;
 
         }
-        form{
-           background-color: #333;
-           display: inline-flex;
-           border-radius: 1.5rem;
-           padding: 1.5rem;
-           color: #fff;
-           flex-direction: column;
-           width:30rem;
-           gap: 1rem;
-           
-           
+
+        form {
+            background-color: #333;
+            display: inline-flex;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            color: #fff;
+            flex-direction: column;
+            width: 30rem;
+            gap: 1rem;
+            overflow: none;
+
+
         }
-        h1{
-            font-family:fantasy;
-            margin:0rem;
-            padding:0rem;
-            
+
+        h1 {
+            font-family: fantasy;
+            margin: 0rem;
+            padding: 0rem;
+
         }
-        input[type="submit"]{
-            background:#f80;
-            color:inherit;
+
+        input[type="submit"] {
+            background: #f80;
+            color: inherit;
             border-radius: 100rem;
-            padding:1rem;
+            padding: 1rem;
             border: none;
             letter-spacing: 0.25em;
-            text-transform:uppercase;
+            text-transform: uppercase;
 
         }
-        input[type="checkbox"]{
+
+        input[type="checkbox"] {
             align-self: flex-start;
+        }
+
+        /*
+			Don't display the native radio buttons
+			Never place outlines on the radio elements
+		*/
+        input[type="radio"] {
+            appearance: none;
+            outline: none !important;
+        }
+
+
+        /*
+			Select the div that comes after each radio button
+		*/
+        input[type="radio"]+div {
+
+            /* Make it look like a circle */
+            background: #fbc;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 4rem;
+
+            /* Center the text inside of it */
+            line-height: 4rem;
+            text-align: center;
+
+            /* Don't highlight text if dragged */
+            user-select: none;
+
+        }
+        .rating-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /*
+			Change color of div when checked
+		*/
+        input:checked+div {
+            background: #867;
         }
     </style>
 
@@ -61,22 +109,39 @@
 <body>
     <form>
         <input type="checkbox" value="*" name="star">
-            
+
         <h1>
             How Did We Do?
         </h1>
         <div>
             gerjgeogj
         </div>
-        <div>
-         <label>
-            <input type="radio" value="1" name="rating">
-            <input type="radio" value="2" name="rating">
-            <input type="radio" value="3" name="rating">
-            <input type="radio" value="4" name="rating">
-            <input type="radio" value="5" name="rating">
-        </label>
-            
+        <div class="rating-buttons">
+            <label>
+                <input type="radio" value="1" name="rating">
+                <div>1</div>
+            </label>
+            <label>
+                <input type="radio" value="2" name="rating">
+                <div>2</div>
+            </label>
+            <label>
+                <input type="radio" value="3" name="rating">
+                <div>3</div>
+            </label>
+            <label>
+                <input type="radio" value="4" name="rating">
+                <div>4</div>
+            </label>
+            <label>
+                <input type="radio" value="5" name="rating">
+                <div>5</div>
+            </label>
+
+
+
+
+
         </div>
         <input type="submit">
 
