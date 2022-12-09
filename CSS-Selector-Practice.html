@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .calculator {
+                display: flex;
+                background-color: yellow;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                
+            }
+
+            .calculator__buttons {
+                display: grid;
+                grid-template:
+                "b7 b8 b9 mb" 
+            "b4 b5 b6 pb" 40px
+            "b1 b2 b3 eq" 40px
+            "b0 b0 dec eq" 40px / 1fr 1fr 1fr;
+            gap: 1rem;
+
+            
+            }
+
+            .calculator__display {
+                background: rgb(118, 227, 118);
+                height: 100px;
+                border-radius: 1rem;
+
+            }
+
+            div [data-button="0"] {grid-area: b0;}
+            div [data-button="1"] {grid-area: b1;}
+            div [data-button="2"] {grid-area: b2;}
+            div [data-button="3"] {grid-area: b3;}
+            div [data-button="4"] {grid-area: b4;}
+            div [data-button="5"] {grid-area: b5;}
+            div [data-button="6"] {grid-area: b6;}
+            div [data-button="7"] {grid-area: b7;}
+            div [data-button="8"] {grid-area: b8;}
+            div [data-button="9"] {grid-area: b9;}
+            
+
+            [data-button] {
+                background: purple;
+                
+            }
+
+            
+
+
+        </style>
+   
+    </head>
+
+    <body>
+        <div class="calculator">
+            
+            <div class="calculator__display">
+               
+            </div>
+            <div class="calculator__buttons">
+                <div data-button="0">0</div>
+                <div data-button="1">1</div> 
+                <div data-button="2">2</div> 
+                <div data-button="3">3</div>   
+                <div data-button="4">4</div> 
+                <div data-button="5">5</div> 
+                <div data-button="6">6</div> 
+                <div data-button="7">7</div> 
+                <div data-button="8">8</div> 
+                <div data-button="9">9</div> 
+
+            </div>
+        </div>
+    </body>
+</html>
