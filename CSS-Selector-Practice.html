@@ -3,22 +3,24 @@
     <head>
         <style>
             .calculator {
-                display: flex;
+                display: inline-flex;
                 background-color: yellow;
                 flex-direction: column;
                 padding: 1rem;
                 gap: 1rem;
+                width: 500px;
                 
             }
 
             .calculator__buttons {
                 display: grid;
                 grid-template:
-                "b7 b8 b9 mb" 
-            "b4 b5 b6 pb" 40px
-            "b1 b2 b3 eq" 40px
-            "b0 b0 dec eq" 40px / 1fr 1fr 1fr;
-            gap: 1rem;
+                "mc m dv ml" 40px
+                "b7 b8 b9 mb" 40px
+                "b4 b5 b6 pb" 40px
+                "b1 b2 b3 eq" 40px
+                "b0 b0 dec eq" 40px / 1fr 1fr 1fr 1fr;
+                gap: 1rem;
 
             
             }
@@ -31,6 +33,7 @@
             }
 
             div [data-button="0"] {grid-area: b0;}
+             
             div [data-button="1"] {grid-area: b1;}
             div [data-button="2"] {grid-area: b2;}
             div [data-button="3"] {grid-area: b3;}
@@ -40,14 +43,25 @@
             div [data-button="7"] {grid-area: b7;}
             div [data-button="8"] {grid-area: b8;}
             div [data-button="9"] {grid-area: b9;}
+           
             
 
             [data-button] {
-                background: purple;
-                
+                --button-color: white;
+                --button-side-color: grey;
+                background: var(--button-color);
+                border-radius: 5px;
+                box-shadow: 0px 5px 0px var(--button-side-color), 0px 5px 5px #0008;
+                font-size: larger;
+                text-align: center;
+                text-shadow: 0px 1px 2px grey;
+
             }
 
-            
+            .red {
+                --button-color: red;
+                --button-side-color: darkred;
+            }
 
 
         </style>
@@ -61,7 +75,7 @@
                
             </div>
             <div class="calculator__buttons">
-                <div data-button="0">0</div>
+                <div class="red" data-button="0">0</div>
                 <div data-button="1">1</div> 
                 <div data-button="2">2</div> 
                 <div data-button="3">3</div>   
@@ -71,6 +85,15 @@
                 <div data-button="7">7</div> 
                 <div data-button="8">8</div> 
                 <div data-button="9">9</div> 
+                <div style="grid-area: dec;" data-button=".">.</div>
+                <div style="grid-area: eq;" data-button="=">=</div>
+                <div style="grid-area: pb;" data-button="+">+</div>
+                <div style="grid-area: mb;" data-button="-">-</div>
+                <div style="grid-area: mc;" data-button="MC">MC</div>
+                <div style="grid-area: m;" data-button="M+">M+</div>
+                <div style="grid-area: dv;" data-button="/">/</div>
+                <div style="grid-area: ml;" data-button="*">*</div>
+
 
             </div>
         </div>
