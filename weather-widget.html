@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    .weather {
+      width: 15rem;
+      height: 4rem;
+      display: inline-grid;
+      background: #f60;
+      border-radius: 1rem;
+      background-image: radial-gradient(circle at top right, rgba(255, 244, 44, 1) 20%, rgba(255, 205, 44, 1) 20%, rgba(255, 205, 44, 1) 40%, rgba(255, 176, 44, 1) 40%, rgba(255, 176, 44, 1) 59%, rgba(255, 141, 44, 1) 59%);
+      grid-template:
+        "summary . time" auto
+        ".       . ." 1fr
+        "temp    . location" auto / auto 1fr auto;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    .weather__summary {
+      grid-area: summary;
+      font-size: 1.5rem;
+    }
+
+    .weather__time {
+      grid-area: time;
+      font-size: 1rem;
+      text-align: right;
+    }
+
+    .weather__temp {
+      grid-area: temp;
+      font-size: 2rem;
+    }
+
+    .weather__location {
+      font-size: 0.5rem;
+      grid-area: location;
+      text-align: right;
+      align-self: end;
+      justify-self: right;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="weather">
+    <div class="weather__summary">Sunny</div>
+    <div class="weather__time">7:15pm</div>
+    <div class="weather__temp">32deg</div>
+    <div class="weather__location">CA</div>
+  </div>
+</body>
+
+</html>
